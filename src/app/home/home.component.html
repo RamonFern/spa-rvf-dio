@@ -1,1 +1,36 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alunos</title>
+    </head>
+  
+  <body>
+
+    <div>
+        <app-alunos [valorInicial]="valor"></app-alunos>
+
+      <button (click)="mudarValor()">Mudar Valor</button>
+      <button (click)="reiniciarValor()">Reiniciar Valor</button>
+      <button (click)="exibirTabela()">Exibir Tabela</button>
+    </div>
+
+  <table *ngIf="exibiTabela">
+      <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Email</th>
+          <th>Curso</th>
+      </tr>
+      <tr *ngFor='let aluno of listaAlunos'>
+          <td>{{ aluno.nome }}</td>
+          <td>{{ aluno.idade }}</td>
+          <td>{{ aluno.email }}</td>
+          <td>{{ aluno.curso }}</td>
+      </tr>
+  </table>
+
+
+</body>
+</html>
