@@ -1,1 +1,15 @@
 <h1>Professores dos Cursos</h1>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Curso</th>
+    </tr>
+    <tr *ngFor='let professores of listaProfessores'>
+        <td>{{ professores.nome }}</td>
+        <td>{{ professores.email }}</td>
+        <td>{{ professores.curso }}</td>
+    </tr>
+</table>
+  
