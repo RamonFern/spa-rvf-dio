@@ -12,9 +12,9 @@
     <div>
         <app-alunos [valorInicial]="valor"></app-alunos>
 
-      <button (click)="mudarValor()">Mudar Valor</button>
-      <button (click)="reiniciarValor()">Reiniciar Valor</button>
-      <button (click)="exibirTabela()">Exibir Tabela</button>
+      <button mat-raised-button color="primary" (click)="mudarValor()">Mudar Valor</button>
+      <button mat-raised-button color="accent" (click)="reiniciarValor()">Reiniciar Valor</button>
+      <button mat-raised-button color="warn" (click)="exibirTabela()">Exibir Tabela</button>
     </div>
 
   <table *ngIf="exibiTabela">
@@ -32,8 +32,9 @@
       </tr>
   </table>
 
-  <app-professores></app-professores>
+  
 
+ <a href="/professores">Visualizar professores dos cursos</a>
 
 </body>
 </html>
